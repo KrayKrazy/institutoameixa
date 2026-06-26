@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Users, HandHeart } from 'lucide-react';
+import { Briefcase, Users, HandHeart, Activity } from 'lucide-react';
 
 const Eixos = () => {
   return (
@@ -41,6 +41,18 @@ const Eixos = () => {
               <h3 style={{ marginBottom: '0.5rem' }}>Assistência Social e Arrecadação</h3>
               <p style={{ color: 'var(--text-secondary)' }}>
                 Desenvolvimento de campanhas de arrecadação de alimentos, recursos e doações, além de firmar convênios para o custeio dos programas educacionais.
+              </p>
+            </div>
+          </div>
+
+          <div className="glass-card" style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start' }}>
+            <div style={{ background: 'var(--primary)', padding: '1rem', borderRadius: '12px' }}>
+              <Activity size={32} color="white" />
+            </div>
+            <div>
+              <h3 style={{ marginBottom: '0.5rem' }}>Esporte e Lutas</h3>
+              <p style={{ color: 'var(--text-secondary)' }}>
+                Promoção de atividades esportivas voltadas às artes marciais, com grande foco na <strong>Capoeira</strong>, estimulando a disciplina, saúde física, resgate cultural e autoconfiança.
               </p>
             </div>
           </div>
