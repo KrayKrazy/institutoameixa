@@ -21,10 +21,10 @@ const Footer = () => {
                 <MapPin size={18} /> Brasília - DF (Sede)
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                <Mail size={18} /> contato@institutoameixa.org.br
+                <Mail size={18} /> kelevracontato@gmail.com
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Phone size={18} /> (61) 99999-9999
+                <Phone size={18} /> (61) 98184-9873
               </li>
             </ul>
           </div>
