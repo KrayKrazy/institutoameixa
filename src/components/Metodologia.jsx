@@ -9,7 +9,7 @@ const Metodologia = () => {
         
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 4rem auto' }}>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)' }}>
-            O Instituto utiliza como pilar principal o <strong>Método CIS</strong>, fundamentado e ministrado pela <strong>Febracis</strong>, a maior escola de negócios e inteligência emocional do mundo.
+            O Instituto utiliza como pilar principal metodologias de alto impacto em <strong>Inteligência Emocional</strong> para a transformação e o autodesenvolvimento da juventude.
           </p>
         </div>
 

@@ -33,7 +33,7 @@ const Footer = () => {
             <h4 style={{ marginBottom: '1.5rem' }}>Links Úteis</h4>
             <ul style={{ listStyle: 'none', color: 'var(--text-secondary)' }}>
               <li style={{ marginBottom: '0.5rem' }}><a href="#sobre" style={{ transition: 'color 0.3s' }}>Estatuto Social (PDF)</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="#metodologia" style={{ transition: 'color 0.3s' }}>Método CIS</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="#metodologia" style={{ transition: 'color 0.3s' }}>Nossa Metodologia</a></li>
               <li><a href="#apoie" style={{ transition: 'color 0.3s' }}>Portal da Transparência</a></li>
             </ul>
           </div>

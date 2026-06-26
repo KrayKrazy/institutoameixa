@@ -12,7 +12,7 @@ const Hero = () => {
           Transformando o Futuro da Juventude com <span>Inteligência Emocional</span>
         </h1>
         <p className={styles.subtitle}>
-          Um projeto social baseado no Método CIS dedicado ao autodesenvolvimento de jovens em situação de vulnerabilidade na Vila São José (Vicente Pires).
+          Um projeto social de inteligência emocional dedicado ao autodesenvolvimento de jovens em situação de vulnerabilidade na Vila São José (Vicente Pires).
         </p>
         <div className={styles.cta}>
           <a href="#apoie" className="btn-primary">

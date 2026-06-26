@@ -16,12 +16,12 @@ const Lideranca = () => {
             Presidente & Sócio-Fundador
           </p>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2rem' }}>
-            Parceiro institucional da <strong>Febracis</strong>. Atua como ponte, facilitador e liderança metodológica para a aplicação dos treinamentos e do Método CIS dentro do Instituto Ameixa.
+            Especialista em inteligência emocional. Atua como facilitador e liderança metodológica para a aplicação dos treinamentos de reprogramação de crenças dentro do Instituto Ameixa.
           </p>
           
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.05)', padding: '1rem 2rem', borderRadius: '50px' }}>
             <Award color="var(--primary-light)" />
-            <span style={{ fontWeight: '500' }}>Certificação Oficial Método CIS & Febracis</span>
+            <span style={{ fontWeight: '500' }}>Especialista em Inteligência Emocional</span>
           </div>
         </div>
       </div>
