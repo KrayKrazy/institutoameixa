@@ -35,7 +35,7 @@ const Header = ({ onOpenPartnerModal }) => {
         <div className={`container ${styles.headerContent}`}>
           <a href="#" className={styles.logoArea} aria-label="Instituto Ameixa - Início">
             <div className={styles.logoIcon}>
-              <Sparkles size={22} color="var(--accent)" />
+              <img src="/logo-symbol-gold.svg" alt="Símbolo Árvore Instituto Ameixa" style={{ width: '28px', height: '28px' }} />
             </div>
             <div className={styles.logoText}>
               <span className={styles.brandName}>
@@ -85,7 +85,7 @@ const Header = ({ onOpenPartnerModal }) => {
         <div className={styles.drawerHeader}>
           <div className={styles.logoArea}>
             <div className={styles.logoIcon}>
-              <Sparkles size={20} color="var(--accent)" />
+              <img src="/logo-symbol-gold.svg" alt="Símbolo Árvore Instituto Ameixa" style={{ width: '26px', height: '26px' }} />
             </div>
             <span className={styles.brandName}>
               Instituto <span>Ameixa</span>

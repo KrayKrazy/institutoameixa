@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Identidade Visual & Vetores | Instituto Ameixa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4b2c6b;
+      --primary-light: #7e469b;
+      --primary-dark: #271238;
+      --accent: #d4af37;
+      --accent-light: #f5da7f;
+      --bg: #09090d;
+      --surface: #13121b;
+      --surface-card: #191824;
+      --border: rgba(212, 175, 55, 0.2);
+      --text: #ffffff;
+      --text-muted: #9e9eb0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+    .header {
+      background: linear-gradient(180deg, #1f142b 0%, var(--bg) 100%);
+      padding: 4rem 2rem 3rem 2rem;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    h1 span {
+      background: linear-gradient(135deg, #f5da7f, #d4af37, #9b720b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .section {
+      margin-top: 4rem;
+    }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      margin-left: 1.25rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    .preview-box {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .bg-dark { background: #0c0b12; border: 1px solid rgba(255, 255, 255, 0.08); }
+    .bg-white { background: #ffffff; border: 1px solid rgba(0, 0, 0, 0.1); }
+    .bg-plum { background: linear-gradient(135deg, #4b2c6b, #271238); }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .card-desc {
+      font-size: 0.885rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.25rem;
+      border-radius: 8px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.885rem;
+      transition: all 0.2s ease;
+    }
+    .btn-download:hover {
+      background: var(--accent);
+      color: #09090d;
+    }
+    /* Color Swatches */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .color-card {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .swatch {
+      height: 100px;
+      width: 100%;
+    }
+    .color-info {
+      padding: 1rem;
+    }
+    .color-name { font-weight: 700; font-size: 1rem; margin-bottom: 0.25rem; }
+    .color-role { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; font-weight: 600; }
+    .color-code { font-family: monospace; font-size: 0.85rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="badge">Brand Guidelines & Vetores Oficiais</div>
+      <h1>Instituto <span>Ameixa</span></h1>
+      <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">
+        Manual técnico de aplicação de marca, matriz cromática, tipografia e acervo de arquivos vetoriais escaláveis em formato SVG.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Seção: Variações da Marca -->
+    <section class="section">
+      <h2 class="section-title">Variações Oficiais da Logo</h2>
+      <p class="section-desc">Formatos vetorizados prontos para uso em ambiente digital, institucional e materiais impressos.</p>
+
+      <div class="grid">
+        <!-- 1. Vertical Completa -->
+        <div class="card">
+          <div class="preview-box bg-dark">
+            <img src="/logo-vertical.svg" alt="Logo Vertical" style="max-height: 190px;">
+          </div>
+          <div>
+            <h3 class="card-title">Logo Vertical (Principal)</h3>
+            <p class="card-desc">Símbolo da árvore sobreposto à tipografia "Instituto Ameixa". Uso primário para fachadas, totens, banners e relatórios de capa.</p>
+          </div>
+          <a href="/logo-vertical.svg" download class="btn-download">Baixar SVG (Vertical)</a>
+        </div>
+
+        <!-- 2. Horizontal (Lockup) -->
+        <div class="card">
+          <div class="preview-box bg-dark">
+            <img src="/logo-horizontal.svg" alt="Logo Horizontal" style="max-width: 260px;">
+          </div>
+          <div>
+            <h3 class="card-title">Logo Horizontal (Lockup)</h3>
+            <p class="card-desc">Símbolo à esquerda e tipografia à direita. Ideal para cabeçalhos de sites, rodapés, assinaturas de e-mail e papelaria formal.</p>
+          </div>
+          <a href="/logo-horizontal.svg" download class="btn-download">Baixar SVG (Horizontal)</a>
+        </div>
+
+        <!-- 3. Símbolo / Ícone Dourado -->
+        <div class="card">
+          <div class="preview-box bg-dark">
+            <img src="/logo-symbol-gold.svg" alt="Símbolo Dourado" style="max-height: 160px;">
+          </div>
+          <div>
+            <h3 class="card-title">Símbolo da Árvore (Dourado Nobre)</h3>
+            <p class="card-desc">A Árvore da Inteligência Emocional em gradiente imperial. Utilizado como Favicon, avatar em redes sociais e selo institucional.</p>
+          </div>
+          <a href="/logo-symbol-gold.svg" download class="btn-download">Baixar SVG (Símbolo Ouro)</a>
+        </div>
+
+        <!-- 4. Símbolo Ameixa Nobre -->
+        <div class="card">
+          <div class="preview-box bg-white">
+            <img src="/logo-symbol.svg" alt="Símbolo Roxo" style="max-height: 160px;">
+          </div>
+          <div>
+            <h3 class="card-title">Símbolo da Árvore (Roxo Ameixa)</h3>
+            <p class="card-desc">Aplicação em tom Ameixa sobre fundo claro, papel timbrado ou materiais corporativos de alto contraste.</p>
+          </div>
+          <a href="/logo-symbol.svg" download class="btn-download">Baixar SVG (Símbolo Roxo)</a>
+        </div>
+
+        <!-- 5. Monocromática Branca -->
+        <div class="card">
+          <div class="preview-box bg-plum">
+            <img src="/logo-horizontal-white.svg" alt="Logo Branca" style="max-width: 260px;">
+          </div>
+          <div>
+            <h3 class="card-title">Monocromática Negativa (Branca)</h3>
+            <p class="card-desc">Para aplicação sobre fundos de cor sólida (roxo escuro, fotografias contrastantes ou tecidos de camisetas e uniformes).</p>
+          </div>
+          <a href="/logo-horizontal-white.svg" download class="btn-download">Baixar SVG (Branco)</a>
+        </div>
+
+        <!-- 6. Edição 3D Relevo (Fidelidade Original) -->
+        <div class="card">
+          <div class="preview-box bg-dark">
+            <img src="/logo-3d.svg" alt="Logo 3D Relevo" style="max-height: 190px;">
+          </div>
+          <div>
+            <h3 class="card-title">Edição 3D Emborrachada / Relevo</h3>
+            <p class="card-desc">Vetor com efeito tridimensional de relevo e chanfro em tom ameixa, recriando com máxima fidelidade o mockup original do instituto.</p>
+          </div>
+          <a href="/logo-3d.svg" download class="btn-download">Baixar SVG (Edição 3D)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Paleta de Cores -->
+    <section class="section">
+      <h2 class="section-title">Paleta Cromática Oficial</h2>
+      <p class="section-desc">Valores exatos para reprodução fiel em telas (RGB/HEX) e em processos gráficos (CMYK).</p>
+
+      <div class="color-grid">
+        <div class="color-card">
+          <div class="swatch" style="background: #4b2c6b;"></div>
+          <div class="color-info">
+            <div class="color-name">Roxo Ameixa Nobre</div>
+            <div class="color-role">Cor Primária Institucional</div>
+            <div class="color-code">HEX: #4B2C6B</div>
+            <div class="color-code">RGB: 75, 44, 107</div>
+            <div class="color-code">CMYK: 70, 90, 20, 30</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="swatch" style="background: #7e469b;"></div>
+          <div class="color-info">
+            <div class="color-name">Roxo Ameixa Iluminado</div>
+            <div class="color-role">Realces & Gradientes</div>
+            <div class="color-code">HEX: #7E469B</div>
+            <div class="color-code">RGB: 126, 70, 155</div>
+            <div class="color-code">CMYK: 55, 80, 0, 5</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="swatch" style="background: #271238;"></div>
+          <div class="color-info">
+            <div class="color-name">Roxo Ameixa Profundo</div>
+            <div class="color-role">Sombras & Contraste</div>
+            <div class="color-code">HEX: #271238</div>
+            <div class="color-code">RGB: 39, 18, 56</div>
+            <div class="color-code">CMYK: 80, 95, 30, 65</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="swatch" style="background: #d4af37;"></div>
+          <div class="color-info">
+            <div class="color-name">Dourado Imperial</div>
+            <div class="color-role">Acento de Prestígio & Luz</div>
+            <div class="color-code">HEX: #D4AF37</div>
+            <div class="color-code">RGB: 212, 175, 55</div>
+            <div class="color-code">CMYK: 15, 30, 90, 10</div>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="swatch" style="background: #09090d;"></div>
+          <div class="color-info">
+            <div class="color-name">Preto Ônix</div>
+            <div class="color-role">Superfície Dark Mode</div>
+            <div class="color-code">HEX: #09090D</div>
+            <div class="color-code">RGB: 9, 9, 13</div>
+            <div class="color-code">CMYK: 75, 70, 65, 85</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Simbologia e Significado -->
+    <section class="section">
+      <h2 class="section-title">Anatomia & Simbologia do Ícone</h2>
+      <p class="section-desc">A metáfora visual viva da Inteligência Emocional aplicada ao desenvolvimento da juventude.</p>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;">
+        <div>
+          <h3 style="color: var(--accent); margin-bottom: 0.5rem; font-size: 1.2rem;">1. Raízes Profundas</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Simbolizam a <strong>Autoconsciência</strong> e a ancoragem familiar. Uma base sólida e nutrida protege o indivíduo contra intempéries e crises externas, garantindo firmeza moral e discernimento.
+          </p>
+        </div>
+        <div>
+          <h3 style="color: var(--accent); margin-bottom: 0.5rem; font-size: 1.2rem;">2. Tronco Estruturado</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Representa a <strong>Autorregulação e a Disciplina</strong>. É a capacidade de suportar peso e resistir às tempestades emocionais através do domínio próprio, serenidade e conduta ética inabalável.
+          </p>
+        </div>
+        <div>
+          <h3 style="color: var(--accent); margin-bottom: 0.5rem; font-size: 1.2rem;">3. Copa Exponencial & Nervuras</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Expressam as <strong>Habilidades Sociais, Empatia e Liderança Cidadã</strong>. Cada folha é um jovem desenvolvido, que recebe seiva da inteligência emocional e gera sombra, abrigo e frutos para sua comunidade.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top: 5rem; text-align: center; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 2rem;">
+      <p>&copy; 2026 Instituto Ameixa. Todos os direitos reservados. Manual de Identidade Visual v1.0.</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

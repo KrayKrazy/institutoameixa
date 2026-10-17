@@ -50,7 +50,7 @@ const Footer = ({ onOpenPartnerModal }) => {
                   justifyContent: 'center',
                 }}
               >
-                <Sparkles size={20} color="var(--accent)" />
+                <img src="/logo-symbol-gold.svg" alt="Símbolo Árvore Instituto Ameixa" style={{ width: '24px', height: '24px' }} />
               </div>
               <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.35rem', fontWeight: '800', color: '#fff' }}>
                 Instituto <span style={{ color: 'var(--accent)' }}>Ameixa</span>
