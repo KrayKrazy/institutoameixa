@@ -58,7 +58,7 @@ const Hero = ({ onOpenPartnerModal }) => {
                 <div className={styles.emblemAura} />
                 <img
                   src="/logo-vertical.svg"
-                  alt="Árvore da Inteligência Emocional - Instituto Ameixa"
+                  alt="Instituto Ameixa"
                   className={styles.emblemLogo}
                 />
               </div>
@@ -67,7 +67,7 @@ const Hero = ({ onOpenPartnerModal }) => {
                 Instituto <span>Ameixa</span>
               </h2>
               <p className={styles.emblemSub}>
-                A Árvore da Inteligência Emocional
+                Desenvolvimento Humano & Cidadania
               </p>
 
               <div className={styles.emblemBadges}>
