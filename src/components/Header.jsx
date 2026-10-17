@@ -1,23 +1,136 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Sparkles, Menu, X, ArrowUpRight, HeartHandshake } from 'lucide-react';
 import styles from './Header.module.css';
 
-const Header = () => {
+const Header = ({ onOpenPartnerModal }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 30);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: 'Quem Somos', href: '#sobre' },
+    { label: 'Metodologia', href: '#metodologia' },
+    { label: '5 Pilares', href: '#pilares' },
+    { label: 'Trilhas de Formação', href: '#trilhas' },
+    { label: 'Diagnóstico Emocional', href: '#diagnostico' },
+    { label: 'Governança & ESG', href: '#governanca' },
+    { label: 'Liderança', href: '#lideranca' },
+    { label: 'FAQ', href: '#faq' },
+  ];
+
+  const handleLinkClick = () => {
+    setMobileOpen(false);
+  };
+
   return (
-    <header className={styles.header}>
-      <div className={`container ${styles.headerContent}`}>
-        <div className={styles.logo}>
-          Instituto Ameixa
-        </div>
-        <nav className={styles.nav}>
-          <a href="#sobre">Quem Somos</a>
-          <a href="#metodologia">Metodologia</a>
-          <a href="#eixos">Eixos</a>
-          <a href="#apoie" className="btn-primary" style={{ padding: '0.5rem 1.5rem', fontSize: '1rem' }}>
-            Apoie o Projeto
+    <>
+      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+        <div className={`container ${styles.headerContent}`}>
+          <a href="#" className={styles.logoArea} aria-label="Instituto Ameixa - Início">
+            <div className={styles.logoIcon}>
+              <Sparkles size={22} color="var(--accent)" />
+            </div>
+            <div className={styles.logoText}>
+              <span className={styles.brandName}>
+                Instituto <span>Ameixa</span>
+              </span>
+              <span className={styles.brandTagline}>Inteligência Emocional & Impacto</span>
+            </div>
           </a>
+
+          <nav className={styles.desktopNav} aria-label="Navegação principal">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} className={styles.navLink}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className={styles.navActions}>
+            <button
+              onClick={onOpenPartnerModal}
+              className={`btn-primary ${styles.partnerBtn}`}
+              type="button"
+            >
+              <HeartHandshake size={17} />
+              <span>Seja um Parceiro</span>
+            </button>
+
+            <button
+              className={styles.menuToggle}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Abrir menu de navegação"
+              type="button"
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Backdrop Mobile */}
+      {mobileOpen && (
+        <div className={styles.drawerBackdrop} onClick={() => setMobileOpen(false)} />
+      )}
+
+      {/* Drawer Mobile */}
+      <aside className={`${styles.mobileDrawer} ${mobileOpen ? styles.mobileDrawerOpen : ''}`}>
+        <div className={styles.drawerHeader}>
+          <div className={styles.logoArea}>
+            <div className={styles.logoIcon}>
+              <Sparkles size={20} color="var(--accent)" />
+            </div>
+            <span className={styles.brandName}>
+              Instituto <span>Ameixa</span>
+            </span>
+          </div>
+          <button
+            className={styles.menuToggle}
+            onClick={() => setMobileOpen(false)}
+            aria-label="Fechar menu"
+            type="button"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        <nav className={styles.drawerLinks}>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={styles.drawerLink}
+              onClick={handleLinkClick}
+            >
+              <span>{link.label}</span>
+              <ArrowUpRight size={16} color="var(--accent)" />
+            </a>
+          ))}
         </nav>
-      </div>
-    </header>
+
+        <div className={styles.drawerFooter}>
+          <button
+            onClick={() => {
+              setMobileOpen(false);
+              onOpenPartnerModal();
+            }}
+            className="btn-primary"
+            style={{ width: '100%' }}
+            type="button"
+          >
+            <HeartHandshake size={18} />
+            <span>Apoiar Projeto / Parcerias</span>
+          </button>
+        </div>
+      </aside>
+    </>
   );
 };
 

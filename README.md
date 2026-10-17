@@ -1,16 +1,63 @@
-# React + Vite
+# Instituto Ameixa — Portal Institucional
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Plataforma institucional do **Instituto Ameixa**, organização civil sem fins lucrativos dedicada à emancipação humana e ao autodesenvolvimento de jovens através da **Inteligência Emocional**, neurociência comportamental aplicada, cidadania e liderança socioemocional.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🏛️ Sobre o Instituto
 
-## React Compiler
+O Instituto Ameixa promove programas de alto impacto formativo voltados a jovens em situação de vulnerabilidade, oferecendo ferramentas para superação de adversidades e inserção cidadã e profissional:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Inteligência Emocional Aplicada:** Autoconhecimento, autorregulação e projeto de vida.
+- **Trilhas de Capacitação:** Formação socioemocional direcionada para o mercado de trabalho.
+- **Fortalecimento Familiar:** Círculos de diálogo e comunicação não-violenta no ambiente familiar.
+- **Disciplina & Cultura:** Artes marciais e Capoeira como aliadas da regulação corporal e mental.
+- **Governança & ESG:** Prestação de contas aberta, conformidade estatutária e alto retorno social.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Tecnologias & Arquitetura
+
+O portal foi construído com arquitetura moderna e componentes interativos (nível enterprise):
+
+- **React 19**
+- **Vite** (Build & Bundler otimizado)
+- **Lucide React** (Iconografia semântica e acessível)
+- **CSS Modular & Design Tokens** (Glassmorphism de alta fidelidade)
+- **Termômetro Socioemocional Interativo** (Diagnóstico em tempo real)
+- **Portal de Governança & Modal de Parcerias** (Captação de apoiadores e investidores ESG)
+
+---
+
+## 🎨 Identidade Visual
+
+- **Roxo Ameixa Nobre:** `#4b2c6b` / `#271238`
+- **Dourado Imperial (Accent):** `#d4af37` / `#f5da7f`
+- **Dark Mode Profundo (Ônix):** `#09090d` / `#111017`
+- **Tipografia:** Outfit (Headings) & Inter (Corpo)
+
+---
+
+## 🚀 Como Executar Localmente
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Compilar para produção
+npm run build
+
+# Pré-visualizar build
+npm run preview
+```
+
+---
+
+## 📞 Contato Institucional
+
+- **E-mail:** kelevracontato@gmail.com
+- **Telefone:** (61) 98184-9873
+- **Presidente & Fundador:** Solano Cardoso
