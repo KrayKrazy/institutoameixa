@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Shield, Sparkles, Check, ArrowRight, HeartHandshake } from 'lucide-react';
+import { Mail, Phone, Shield, Check, ArrowRight, HeartHandshake } from 'lucide-react';
 
 const Footer = ({ onOpenPartnerModal }) => {
   const [newsletterEmail, setNewsletterEmail] = useState('');

@@ -1,45 +1,91 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Brain, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Brain, HeartHandshake, ShieldCheck, Award } from 'lucide-react';
 import styles from './Hero.module.css';
 
 const Hero = ({ onOpenPartnerModal }) => {
   return (
     <section className={styles.hero} id="inicio">
       <div className={styles.heroGlow} />
+      <div className={styles.treeWatermark} />
       <div className={styles.gridPattern} />
 
       <div className={`container ${styles.content}`}>
-        <div className={styles.taglineBadge}>
-          <Sparkles size={16} color="var(--accent)" />
-          <span>Instituto Ameixa • Formação Socioemocional & Cidadania</span>
-        </div>
+        <div className={styles.heroSplit}>
+          {/* Coluna Esquerda: Mensagem Institucional */}
+          <div className={styles.leftCol}>
+            <div className={styles.taglineBadge}>
+              <img
+                src="/logo-symbol-gold.svg"
+                alt="Símbolo"
+                style={{ width: '18px', height: '18px' }}
+              />
+              <span>Instituto Ameixa • Formação Socioemocional & Cidadania</span>
+            </div>
 
-        <h1 className={styles.title}>
-          Desenvolvendo a Juventude através da{' '}
-          <span className={styles.titleHighlight}>Inteligência Emocional</span>
-        </h1>
+            <h1 className={styles.title}>
+              Desenvolvendo a Juventude através da{' '}
+              <span className={styles.titleHighlight}>Inteligência Emocional</span>
+            </h1>
 
-        <p className={styles.subtitle}>
-          Capacitamos jovens em vulnerabilidade com ferramentas científicas de autoliderança,
-          autorregulação emocional, resiliência e foco. Uma metodologia estruturada para
-          transformar potencial em realizações concretas para a vida toda.
-        </p>
+            <p className={styles.subtitle}>
+              Capacitamos jovens em vulnerabilidade com ferramentas científicas de autoliderança,
+              autorregulação emocional, resiliência e foco. Uma metodologia estruturada para
+              transformar potencial em realizações concretas para a vida toda.
+            </p>
 
-        <div className={styles.ctaGroup}>
-          <button
-            onClick={onOpenPartnerModal}
-            className="btn-primary"
-            type="button"
-          >
-            <HeartHandshake size={20} />
-            <span>Investir no Instituto</span>
-            <ArrowRight size={18} />
-          </button>
+            <div className={styles.ctaGroup}>
+              <button
+                onClick={onOpenPartnerModal}
+                className="btn-primary"
+                type="button"
+              >
+                <HeartHandshake size={20} />
+                <span>Investir no Instituto</span>
+                <ArrowRight size={18} />
+              </button>
 
-          <a href="#diagnostico" className="btn-secondary">
-            <Brain size={19} color="var(--accent-light)" />
-            <span>Diagnóstico de Inteligência Emocional</span>
-          </a>
+              <a href="#diagnostico" className="btn-secondary">
+                <Brain size={19} color="var(--accent-light)" />
+                <span>Diagnóstico de Inteligência Emocional</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Coluna Direita: Vitrine do Emblema Oficial da Árvore */}
+          <div className={styles.rightCol}>
+            <div className={styles.emblemCard}>
+              <div className={styles.emblemImgWrapper}>
+                <div className={styles.emblemAura} />
+                <img
+                  src="/logo-vertical.svg"
+                  alt="Árvore da Inteligência Emocional - Instituto Ameixa"
+                  className={styles.emblemLogo}
+                />
+              </div>
+
+              <h2 className={styles.emblemTitle}>
+                Instituto <span>Ameixa</span>
+              </h2>
+              <p className={styles.emblemSub}>
+                A Árvore da Inteligência Emocional
+              </p>
+
+              <div className={styles.emblemBadges}>
+                <span className={styles.emblemPill}>
+                  <ShieldCheck size={14} color="var(--accent)" />
+                  <span>Governança Aberta</span>
+                </span>
+                <span className={styles.emblemPill}>
+                  <Brain size={14} color="var(--accent)" />
+                  <span>Metodologia Sistêmica</span>
+                </span>
+                <span className={styles.emblemPill}>
+                  <Award size={14} color="var(--accent)" />
+                  <span>S-ROI Comprovado</span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Barra de Impacto & Métricas Enterprise */}

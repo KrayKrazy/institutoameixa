@@ -26,7 +26,7 @@ const Sobre = () => {
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
             gap: '2rem',
-            marginBottom: '3rem',
+            marginBottom: '4rem',
           }}
         >
           <div className="glass-card">
@@ -99,6 +99,98 @@ const Sobre = () => {
               emocional, disciplina e orientação vocacional para conquistar protagonismo cidadão e
               inserção produtiva na sociedade.
             </p>
+          </div>
+        </div>
+
+        {/* Seção Exclusiva da Identidade Visual: A Simbologia da Árvore */}
+        <div
+          className="glass-card"
+          style={{
+            border: '1px solid rgba(212, 175, 55, 0.35)',
+            padding: '3.5rem 3rem',
+            background: 'radial-gradient(ellipse at 50% 20%, rgba(75, 44, 107, 0.35) 0%, rgba(19, 18, 27, 0.95) 100%)',
+            boxShadow: '0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(121, 66, 171, 0.2)',
+            marginBottom: '3rem',
+          }}
+        >
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '3rem',
+              alignItems: 'center',
+            }}
+          >
+            {/* Visual da Árvore */}
+            <div style={{ textAlign: 'center' }}>
+              <div
+                style={{
+                  width: '180px',
+                  height: '180px',
+                  borderRadius: '50%',
+                  background: 'radial-gradient(circle, rgba(126, 70, 155, 0.4) 0%, rgba(39, 18, 56, 0.8) 70%)',
+                  border: '2px solid rgba(212, 175, 55, 0.5)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 1.5rem auto',
+                  boxShadow: '0 0 35px rgba(212, 175, 55, 0.3)',
+                }}
+              >
+                <img
+                  src="/logo-symbol-gold.svg"
+                  alt="Símbolo Oficial da Árvore"
+                  style={{ width: '130px', height: '130px' }}
+                />
+              </div>
+              <span
+                style={{
+                  fontSize: '0.8rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.12em',
+                  color: 'var(--accent)',
+                  fontWeight: '700',
+                }}
+              >
+                Identidade Visual Oficial
+              </span>
+              <h3 style={{ fontSize: '1.6rem', color: '#fff', marginTop: '0.35rem' }}>
+                A Árvore da Inteligência Emocional
+              </h3>
+            </div>
+
+            {/* Tríade de Significado */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '1.25rem' }}>
+                <h4 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '0.25rem' }}>
+                  1. Raízes Profundas • Autoconsciência
+                </h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.925rem', lineHeight: '1.6' }}>
+                  Ancoram o jovem em seus valores fundamentais, promovendo autoconhecimento e
+                  fortalecimento dos laços familiares para resistir às pressões do meio.
+                </p>
+              </div>
+
+              <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '1.25rem' }}>
+                <h4 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '0.25rem' }}>
+                  2. Tronco Estruturado • Autorregulação & Disciplina
+                </h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.925rem', lineHeight: '1.6' }}>
+                  O eixo de sustentação comportamental. Desenvolve a serenidade sob pressão,
+                  a canalização positiva de energias e a firmeza ética nas decisões.
+                </p>
+              </div>
+
+              <div style={{ borderLeft: '3px solid var(--accent)', paddingLeft: '1.25rem' }}>
+                <h4 style={{ fontSize: '1.15rem', color: '#fff', marginBottom: '0.25rem' }}>
+                  3. Copa & 22 Folhas • Empatia & Liderança Cidadã
+                </h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.925rem', lineHeight: '1.6' }}>
+                  A multiplicidade de competências socioemocionais traduzida em frutos:
+                  jovens preparados para o mercado, solidariedade comunitária e transformação coletiva.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

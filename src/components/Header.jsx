@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Menu, X, ArrowUpRight, HeartHandshake } from 'lucide-react';
+import { Menu, X, ArrowUpRight, HeartHandshake } from 'lucide-react';
 import styles from './Header.module.css';
 
 const Header = ({ onOpenPartnerModal }) => {
